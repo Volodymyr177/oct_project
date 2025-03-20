@@ -77,17 +77,4 @@ class Route
     static public function url(string $controller = self::DEFAULT_CONTROLLER, string $action = self::DEFAULT_ACTION){
         return '/' . strtolower($controller) . '/' . strtolower($action);
     }
-
-//    static public function url(string $controller = null, string $action = null){
-//        if(is_null($controller)){
-//            return '/';
-//        }else{
-//            $controller = strtolower($controller);
-//            if (is_null($action)) {
-//                return '/' . $controller;
-//            } else {
-//                return '/' . $controller . '/' . strtolower($action);
-//            }
-//        }
-//    }
 }

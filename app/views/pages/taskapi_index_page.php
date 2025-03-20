@@ -49,7 +49,6 @@
     document.querySelector('#create-task form').onsubmit = function (e){
         let me = this;
         let data = new FormData(this);
-        //let noteName = this.elements.name.value;
         let xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function (){
             if(xhr.readyState == 4){
@@ -64,8 +63,6 @@
             }
         };
         xhr.open('POST', '/taskapi/add');
-        // xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-        // xhr.send('name=' + noteName);//відправка
         xhr.send(data);//відправка
         e.preventDefault();
     };
